@@ -1,0 +1,94 @@
+go :-
+    write('What is the patient\'s name? '),
+    read(Patient),
+    hypothesis(Patient, Disease),
+    write(Patient), write(' probably has '), write(Disease), write('.'), nl.
+
+go :-
+    write('Sorry, I am not able to diagnose the disease.'), nl.
+
+% --- Symptoms ---
+symptom(Patient, fever) :-
+    write('Does '), write(Patient), write(' have a fever (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, rash) :-
+    write('Does '), write(Patient), write(' have a rash (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, headache) :-
+    write('Does '), write(Patient), write(' have a headache (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, runny_nose) :-
+    write('Does '), write(Patient), write(' have a runny nose (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, conjunctivitis) :-
+    write('Does '), write(Patient), write(' have conjunctivitis (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, cough) :-
+    write('Does '), write(Patient), write(' have a cough (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, body_ache) :-
+    write('Does '), write(Patient), write(' have body aches (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, chills) :-
+    write('Does '), write(Patient), write(' have chills (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, sore_throat) :-
+    write('Does '), write(Patient), write(' have a sore throat (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, sneezing) :-
+    write('Does '), write(Patient), write(' have sneezing (y/n)? '),
+    read(Reply), Reply = y.
+
+symptom(Patient, swollen_glands) :-
+    write('Does '), write(Patient), write(' have swollen glands (y/n)? '),
+    read(Reply), Reply = y.
+
+% --- Disease Hypotheses ---
+hypothesis(Patient, measles) :-
+    symptom(Patient, fever),
+    symptom(Patient, cough),
+    symptom(Patient, conjunctivitis),
+    symptom(Patient, runny_nose),
+    symptom(Patient, rash).
+
+hypothesis(Patient, german_measles) :-
+    symptom(Patient, fever),
+    symptom(Patient, headache),
+    symptom(Patient, runny_nose),
+    symptom(Patient, rash).
+
+hypothesis(Patient, flu) :-
+    symptom(Patient, fever),
+    symptom(Patient, headache),
+    symptom(Patient, body_ache),
+    symptom(Patient, conjunctivitis),
+    symptom(Patient, chills),
+    symptom(Patient, sore_throat),
+    symptom(Patient, runny_nose),
+    symptom(Patient, cough).
+
+hypothesis(Patient, common_cold) :-
+    symptom(Patient, headache),
+    symptom(Patient, sneezing),
+    symptom(Patient, sore_throat),
+    symptom(Patient, runny_nose),
+    symptom(Patient, chills).
+
+hypothesis(Patient, mumps) :-
+    symptom(Patient, fever),
+    symptom(Patient, swollen_glands).
+
+hypothesis(Patient, chicken_pox) :-
+    symptom(Patient, fever),
+    symptom(Patient, chills),
+    symptom(Patient, body_ache),
+    symptom(Patient, rash).
