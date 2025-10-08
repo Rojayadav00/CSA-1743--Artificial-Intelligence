@@ -1,0 +1,39 @@
+<!-- HTML Demo for WordPress Blog -->
+
+<!-- Anchor links to sections -->
+<h1>HTML Demo Blog</h1>
+<p>Welcome to my HTML demonstration blog. Use the links below to navigate:</p>
+<ul>
+  <li><a href="#section1">Anchor Tag Example</a></li>
+  <li><a href="#section2">Title Tag Info</a></li>
+  <li><a href="#section3">Image Example</a></li>
+  <li><a href="#section4">Text Formatting</a></li>
+</ul>
+
+<!-- Section 1: Anchor Tag -->
+<h2 id="section1">Anchor Tag Example</h2>
+<p>Click <a href="https://www.google.com" target="_blank">here</a> to visit Google. This demonstrates an <strong>anchor tag</strong>.</p>
+<p>Scroll back to <a href="#top">top</a> to see navigation links again.</p>
+
+<!-- Section 2: Title Tag -->
+<h2 id="section2">Title Tag Information</h2>
+<p>The <code>&lt;title&gt;</code> tag defines the title of your webpage, shown in the browser tab. In WordPress, this is automatically set by your post or page title. You can customize it further using SEO plugins like Yoast.</p>
+
+<!-- Section 3: Image Example -->
+<h2 id="section3">Image Example</h2>
+<p>This is an example of an image using the <code>&lt;img&gt;</code> tag:</p>
+<img src="https://via.placeholder.com/300" alt="Demo Image" width="300">
+<p>The <code>alt</code> attribute describes the image and the <code>width</code> controls the size.</p>
+
+<!-- Section 4: Text Formatting -->
+<h2 id="section4">Text Formatting</h2>
+<p>You can make text <b>bold</b> or <i>italic</i> using the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags.</p>
+<p>You can also create lists:</p>
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<!-- Back to top -->
+<p><a href="#top">Back to Top</a></p>
